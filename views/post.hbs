@@ -1,0 +1,28 @@
+{{!-- <h1>{{post.title}}</h1>
+<h2>{{post.content}}</h2>
+{{#each post.comments}}
+    <h3>User: {{user}}</h3>
+    <h5>{{comment}}</h5>
+{{/each}} --}}
+
+
+<div class="row">
+    <div class="bg-light col-12">
+        <p class="col-12 text-center fw-b h2 bg-secondary mb-3 mt-3 text-light p-1 " >{{post.title}}</p>
+        <p class="col-12 text-center fw-b h5 mb-3 p-1" style="">{{post.content}}</p>
+    </div>
+</div>
+<div>
+    {{#each post.comments}}
+    <div>
+        <p style="margin: 30px;">    -User     :{{user}}</p>
+        <p style="margin: 30px;">    -Comment  :{{comment}}</p>
+    </div>
+    {{/each}}
+</div>
+<div class="text-left mt-5">
+    <a class="btn btn-primary btn-lg" href="/{{post.id}}/edit" style="margin: 20px; background-color: #EA4C89; border-radius: 8px; border-style: none; box-sizing: border-box; color: #FFFFFF; cursor: pointer; display: inline-block; font-family: "Haas Grot Text R Web", "Helvetica Neue", Helvetica, Arial, sans-serif; font-size: 14px; font-weight: 500; height: 40px; line-height: 20px; list-style: none; margin: 0; outline: none; padding: 10px 16px; position: relative; text-align: center; text-decoration: none; transition: color 100ms; vertical-align: baseline; user-select: none; -webkit-user-select: none; touch-action: manipulation; ">Modify</a>
+
+    <a class="btn btn-primary btn-lg" href="/{{post.id}}/comment" style="margin: 0px ; background-color: #EA4C89; border-radius: 8px; border-style: none; box-sizing: border-box; color: #FFFFFF; cursor: pointer; display: inline-block; font-family: "Haas Grot Text R Web", "Helvetica Neue", Helvetica, Arial, sans-serif; font-size: 14px; font-weight: 500; height: 40px; line-height: 20px; list-style: none; margin: 0; outline: none; padding: 10px 16px; position: relative; text-align: center; text-decoration: none; transition: color 100ms; vertical-align: baseline; user-select: none; -webkit-user-select: none; touch-action: manipulation; ">Comment</a>
+</div>
+

@@ -1,0 +1,18 @@
+<form id="addCommentForm" style="margin-top: 20px;">
+    <div class="row">
+        <label for="user" class="col-2 text-left fw-b h3" style="transform: translateX(80px);">User</label>
+        <input type="text" id="user" name="user" placeholder="User" class="col-8 form-control">
+    </div>
+    <div class="row">
+        <label for="comment" class="col-2 text-left fw-b h3 mt-3 " style="transform: translateX(80px);">Comment</label>
+        <input type="text" id="comment" name="comment" placeholder="Comment" class="col-8 form-control mt-3">
+    </div>
+    <div class="text-center mt-5">
+        <a href="/{{postId}}" class="btn btn-primary btn-lg" onclick="addComment({{postId}})"
+            style="margin: 20px; background-color: #EA4C89; border-radius: 8px; border-style: none; box-sizing: border-box; color: #FFFFFF; cursor: pointer; display: inline-block; font-family: "
+            Haas Grot Text R Web", "Helvetica Neue" , Helvetica, Arial, sans-serif; font-size: 14px; font-weight: 500;
+            height: 40px; line-height: 20px; list-style: none; margin: 0; outline: none; padding: 10px 16px; position:
+            relative; text-align: center; text-decoration: none; transition: color 100ms; vertical-align: baseline;
+            user-select: none; -webkit-user-select: none; touch-action: manipulation; ">Add comment</a>
+    </div>
+</form>

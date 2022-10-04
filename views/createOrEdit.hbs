@@ -1,0 +1,61 @@
+<div class="w-100">
+    {{#if post}}
+    <form method="put" action="/{{post.id}}" id="myForm">
+            <div class="row">
+                <p class="col-12 text-left fw-b h3 bg-secondary mb-3 text-light p-1" style="margin: 30px;">ID:
+                    {{post.id}}</p>
+                <label for="title" class="col-1 text-left fw-b h3" style="margin: 30px;">Title:</label>
+                <input type="text" id="title" name="title" placeholder="Title" class="col-8 form-control"
+                    value="{{post.title}}" style="margin: 30px;">
+            </div>
+            <div class="row">
+                <label for="content" class="col-1 text-left fw-b h3 mt-3" style="margin: 30px;">Content:</label>
+                <input type="text" id="content" name="content" placeholder="Content" class="col-8 form-control mt-3"
+                    value="{{post.content}}" style="margin: 30px;">
+            </div>
+        <div class="text-left mt-5">
+            <a href="/{{post.id}}" class="btn btn-primary btn-lg" onclick="editPost({{post.id}})"
+                style="margin: 20px; background-color: #EA4C89; border-radius: 8px; border-style: none; box-sizing: border-box; color: #FFFFFF; cursor: pointer; display: inline-block; font-family: "
+                Haas Grot Text R Web", "Helvetica Neue" , Helvetica, Arial, sans-serif; font-size: 14px; font-weight:
+                500; height: 40px; line-height: 20px; list-style: none; margin: 0; outline: none; padding: 10px 16px;
+                position: relative; text-align: center; text-decoration: none; transition: color 100ms; vertical-align:
+                baseline; user-select: none; -webkit-user-select: none; touch-action: manipulation; ">Edit Blog</a>
+        </div>
+    </form>
+    {{else}}
+        {{!-- <form id=" addPostForm">
+                <div class="row">
+                    <label for="title" class="col-3 text-right fw-b h3">Title:</label>
+                    <input type="text" id="title" name="title" placeholder="Title" class="col-8 form-control">
+                    <label for="content" class="col-3 text-right fw-b h3 mt-3">Content:</label>
+                    <input type="text" id="content" name="content" placeholder="Content"
+                        class="col-8 form-control mt-3">
+                </div>
+                <div class="text-center mt-5">
+                    <a href="/" class="btn btn-primary btn-lg" onclick="addPost()"
+                        style="margin: 0; background-color: #EA4C89; border-radius: 8px; border-style: none; box-sizing: border-box; color: #FFFFFF; cursor: pointer; display: inline-block; font-family: "
+                        Haas Grot Text R Web", "Helvetica Neue" , Helvetica, Arial, sans-serif; font-size: 14px;
+                        font-weight: 500; height: 40px; line-height: 20px; list-style: none; margin: 0; outline: none;
+                        padding: 10px 16px; position: relative; text-align: center; text-decoration: none; transition:
+                        color 100ms; vertical-align: baseline; user-select: none; -webkit-user-select: none;
+                        touch-action: manipulation; ">Add New Post</a>
+            </div>
+        </form> --}}
+        <form id="addPostForm">
+            <div class="row" style="margin: 20px;">
+                <label for="title" class="col-3 text-right fw-b h3">Title:</label>
+                <input type="text" id="title" name="title" placeholder="Input title" class="col-8 form-control">
+                <label for="content" class="col-3 text-right fw-b h3 mt-3">Content:</label>
+                <input type="text" id="content" name="content" placeholder="Input content" class="col-8 form-control mt-3">
+            </div>
+            <div class="text-center mt-5">
+                <a href="/" class="btn btn-primary btn-lg" onclick="addPost()" style="margin: 0; background-color: #EA4C89; border-radius: 8px; border-style: none; box-sizing: border-box; color: #FFFFFF; cursor: pointer; display: inline-block; font-family: "
+                        Haas Grot Text R Web", "Helvetica Neue" , Helvetica, Arial, sans-serif; font-size: 14px;
+                        font-weight: 500; height: 40px; line-height: 20px; list-style: none; margin: 0; outline: none;
+                        padding: 10px 16px; position: relative; text-align: center; text-decoration: none; transition:
+                        color 100ms; vertical-align: baseline; user-select: none; -webkit-user-select: none;
+                        touch-action: manipulation;>Add New Post</a>
+            </div>
+        </form>
+    {{/if}}
+</div>

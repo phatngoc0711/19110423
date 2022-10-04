@@ -1,0 +1,78 @@
+{{!-- {{#each posts}}
+    <h1><li>{{title}}</li></h1>
+{{/each}} --}}
+<style>
+    #table-striped th {
+    border-collapse: collapse;
+    margin: 25px 0;
+    font-size: 0.9em;
+    font-family: sans-serif;
+    min-width: 400px;
+    box-shadow: 0 0 20px rgba(0, 0, 0, 0.15);
+}
+.table-striped thead tr {
+    background-color: #009879;
+    color: #ffffff;
+    text-align: left;
+}
+.table-striped th,
+.table-striped td {
+    padding: 12px 15px;
+}
+.table-striped tbody tr {
+    border-bottom: 1px solid #dddddd;
+}
+
+.table-striped tbody tr:nth-of-type(even) {
+    background-color: #f3f3f3;
+}
+
+.table-striped tbody tr:last-of-type {
+    border-bottom: 2px solid #009879;
+}
+.table-striped tbody tr.active-row {
+    font-weight: bold;
+    color: #009879;
+}
+</style>
+<div class="w-100">
+    {{#if posts}}
+    <div>
+        <table id="tbl" class="table table-striped" style="font-family: Arial, Helvetica, sans-serif;
+  border-collapse: collapse;
+  width: 100%;">
+            <thead>
+                <tr>
+                    <th>Title</th>
+                    <th>Content</th>
+                    <th class="text-center">EDIT</th>
+                    <th class="text-center">DELETE</th>
+                </tr>
+            </thead>
+            {{#each posts}}
+            <tbody>
+                <tr>
+                    <td><a href="/{{id}}">{{title}}</a></td>
+                    <td>{{content}}</td>
+                    <td class="text-center"><a href="/{{id}}/edit">Edit</a> </td>
+                    <td class="text-center"> <a href=""
+                            onclick="deletePost({{id}})">Delete</a></td>
+                </tr>
+            </tbody>
+            {{/each}}
+        </table>
+    </div>
+    <div class="text-center mt-5">
+        <a href="/newPost">
+            <button type="button" class="btn btn-primary btn-lg" style="background-color: #EA4C89; border-radius: 8px; border-style: none; box-sizing: border-box; color: #FFFFFF; cursor: pointer; display: inline-block; font-family: "Haas Grot Text R Web", "Helvetica Neue", Helvetica, Arial, sans-serif; font-size: 14px; font-weight: 500; height: 40px; line-height: 20px; list-style: none; margin: 0; outline: none; padding: 10px 16px; position: relative; text-align: center; text-decoration: none; transition: color 100ms; vertical-align: baseline; user-select: none; -webkit-user-select: none; touch-action: manipulation; ">Add New Blog</button>
+        </a>
+    </div>
+    {{else}}
+    <div class="text-center  fw-b h1" style="margin: 35px;"> Chưa có blog </div>
+    <div class="text-center mt-5">
+        <a href="/newPost">
+            <button type="button" class="btn btn-primary btn-lg" style="background-color: #EA4C89; border-radius: 8px; border-style: none; box-sizing: border-box; color: #FFFFFF; cursor: pointer; display: inline-block; font-family: "Haas Grot Text R Web", "Helvetica Neue", Helvetica, Arial, sans-serif; font-size: 14px; font-weight: 500; height: 40px; line-height: 20px; list-style: none; margin: 0; outline: none; padding: 10px 16px; position: relative; text-align: center; text-decoration: none; transition: color 100ms; vertical-align: baseline; user-select: none; -webkit-user-select: none; touch-action: manipulation; ">Add New Blog</button>
+        </a>
+    </div>
+    {{/if}}
+</div>
